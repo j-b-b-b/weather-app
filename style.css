@@ -5,7 +5,7 @@ body {
 }
 
 .container {
-    background-color: white;
+    background-color:lightcyan;
     box-shadow: 0 0 20px rgba(0,0,0,1);
     max-width: 600px;
     margin: 100px auto;
@@ -28,6 +28,7 @@ form input[type="text"] {
     outline: none;
     font-size: 18px;
     width: 60%;
+    background-color: lightyellow;
 }
 
 form input[type="submit"] {
@@ -74,7 +75,7 @@ form input[type="submit"]:hover {
 
 .details > div {
     padding: 10px;
-    background-color: aliceblue;
+    background-color: lightblue;
     margin: 10px;
     flex: 1;
     border-radius: 5px;
