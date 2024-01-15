@@ -10,7 +10,7 @@ formElement.addEventListener("submit", (event) => {
     event.preventDefault();
     const cityValue = cityInputElement.value;
     getWeatherData(cityValue);
-})
+});
 
 async function getWeatherData(cityValue) {
     try {
@@ -45,17 +45,17 @@ async function getWeatherData(cityValue) {
         const windDegree = jsonData.wind.deg; // wind direction in °
 
         const details = [
-            `Longitude : ${longitude}`,
-            `Latitude : ${latitude}`,
+            // `Longitude : ${longitude}`,
+            // `Latitude : ${latitude}`,
             `Feels Like : ${Math.round(feelsLike)}°C`,
-            `Min Temperature : ${minTemperature}°C`,
-            `Max Temperature : ${maxTemperature}°C`,
+            // `Min Temperature : ${minTemperature}°C`,
+            // `Max Temperature : ${maxTemperature}°C`,
             `Humidity : ${humidity}%`,
-            `Pressure : ${pressure}hPa`,
-            `Visibility : ${visibility}m`,
+            // `Pressure : ${pressure}hPa`,
+            // `Visibility : ${visibility}m`,
             `Wind Speed : ${windSpeed}m/s`,
-            `Wind Degree : ${windDegree}°`
-        ]
+            // `Wind Degree : ${windDegree}°`
+        ];
 
         weatherDataElement.querySelector(".icon").innerHTML = `<img src="http://openweathermap.org/img/wn/${icon}.png" alt="Weather Icon">`;
 
@@ -77,9 +77,9 @@ async function getWeatherData(cityValue) {
 
 function toTitleCase(str) {
     return str.replace(
-      /\w\S*/g,
-      function(txt) {
-        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-      }
+        /\w\S*/g,
+        function(txt) {
+            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+        }
     );
-  }
+}
